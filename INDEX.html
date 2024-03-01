@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTAFOLIO</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./script.js">
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            background-color: #0e0e0e;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header img {
+            width: 10%;
+            height: 10%;
+            border-radius: 50%;
+            margin-top: 10px;
+        }
+
+        section {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        h3 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #070707;
+        }
+
+        img.social-icon {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-right: 5px;
+
+        }
+
+        .social-button {
+            display: inline-block;
+            padding: 5px;
+            border: 1px solid #080808;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .Redes_sociales {
+            display: flex
+        }
+
+        body {
+            background-color: #f7f7f7;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #ff0000;
+            color: #ffffff;
+            padding: 10px 0;
+        }
+
+        /* Estilo adicional para el botón Hobbies */
+        .hobbies-button {
+            display: block;
+            margin: 10px auto;
+            padding: 8px 16px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .hobbies-button:hover {
+            background-color: #050505;
+        }
+    </style>
+    <style>
+        .botones-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            /* Ajusta según sea necesario */
+        }
+
+        .hobbies-button {
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: #ff0b0b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 0 10px;
+            /* Espaciado horizontal entre botones */
+        }
+
+        .hobbies-button:hover {
+            background-color: #000000;
+        }
+
+        .descargar {
+            background-color: #010101;
+        }
+    </style>
+
+    <style>
+        .hobbies-button {
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .descargar {
+            background-color: #0a0b0c;
+            /* Cambia el color de fondo específicamente para el botón de descarga */
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Diego Buitrago</h1>
+
+        <img src="https://media.licdn.com/dms/image/D5603AQGN9k9Xh26NmQ/profile-displayphoto-shrink_800_800/0/1689648365144?e=2147483647&v=beta&t=Mk5BllvSzrR6NvdKSQtA0S0W6xDfQGl3DWI2W6dCU1k"
+            alt="Profile Picture">
+    </header>
+    <div class="botones-container" style="display: flex; justify-content: center;">
+        <button class="hobbies-button" id="descargarPdf">DESCARGAR CV</button>
+        <button class="hobbies-button" onclick="irAHobbies()">Hobbies</button>
+        <button class="hobbies-button" onclick="irADeportesExtremos()">Deportes Extremos</button>
+        <button class="hobbies-button" onclick="irAVideos()">Videos</button>
+        <button class="hobbies-button" onclick="irAMisproyectos()">Mis Proyectos</button>
+    </div>
+
+    <section>
+        <div class="contenedor-padre">
+
+            <div class="datos-personales">
+                <h2>Datos personales</h2>
+                <p>Nombre: Diego Andres Buitrago Castro</p>
+                <p>Edad: 23</p>
+                <p>Profesión: Director de Compras</p>
+                <p>Teléfono: 012345678</p>
+                <p>Hobbies: Fútbol</p>
+            </div>
+        </div>
+
+
+
+        <h3>Redes sociales:</h3>
+        <div class="Redes_sociales">
+            <div class="">
+                <a class="social-button" href="https://www.facebook.com/profile.php?id=100009040736121">
+                    <img class="social-icon"
+                        src="https://e7.pngegg.com/pngimages/991/568/png-clipart-facebook-logo-computer-icons-facebook-logo-facebook.png"
+                        alt="Facebook">
+                </a>
+            </div>
+            <div>
+                <a class="social-button" href="https://wa.me/3207958680">
+                    <img class="social-icon"
+                        src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAMAAzAMBEQACEQEDEQH/xAAbAAEAAQUBAAAAAAAAAAAAAAAABAECAwUGB//EAEAQAAEDAgMFBAcGBAUFAAAAAAEAAgMEEQUhMQYSQVFhIjJxgRMUQpGhwdEHIzNScrEkQ1NiFTRjgvAlkqLC4f/EABoBAQACAwEAAAAAAAAAAAAAAAAEBQECAwb/xAAzEQEAAgEDAgQDBgUFAAAAAAAAAQIDBBExEiEFE0FRMmFxIjOBkcHhI0KhsfAUNENS0f/aAAwDAQACEQMRAD8A9xQEBAQEBAQEBBQlBaXtQWmZvNBb6dvNBUTt5oLhK0oKh4OiC4G6CqAgICAgICAgICAgICAgICC1zw3MoMJn3jZjSb8kFBHK7VwaPeguFO32nOd52QXCCIew3zzQV9FH/TZ7kAwxnWNvuQWGmjOgLfAoLTA9vckv0cEFvpJYj94026ZoMjJ2uyuCgygoLkBAQEBAQEBAQEBAQUJsgwPlvkztHkEBsJfnK4noEGZoa3JoA8EFbhBVBa57G95zR4lY3iGJmI5YzVU7TYzxg/qCx1V92OuvuuE0Tu7Kw+Dgs9UHVX3X3HNZbKoKFBikp2PzHZdzCDDvvgNpMxwcEEiOQOGqDIgICAgICAgICAgoTYXQRyXyuszQalBmjjazQZnUoLrgII9XW01HEZKmZsbeF9T4DitbXrSN7S0vkpjje07OdrdrMy2ig/3yZfBRL6v/AKK7J4j6Y4/NpajGcRqPxKp4H5Y+yFGtmyW5lCvqs1+bfogyPfJ33Of+t11zmZnmUeZmeVoA5AeS12Y2gHZNxr0SOxHbhJhr6uE3iqZW/wC8reMl68S61zZK8S21JtTWRECoYydnE91ykU1d4+JLx+IZK/F3dDhmO0NcQxshjmOkcmRPhwKlY89L9oWOHV4ss7RO0tpcc13SQgHXQoIkkLoSXx3LPy8kGWCUPGqDOgICAgICAgIKEgII7i6VxYDYDUoM7GhjQ1ugQVJtqg5vGtpY4HPgobSSjIyHNrfDmoebUxXtTlXajXRT7NO8uSqKiWolMs73SSHiSoNrTblUXva872neVlwtWpdAugXQLoF0C6Chsbg6Idm7wnaKoo3NjqS6aDr3m+B4qTh1NqTtPCdp9bbHO1+8Oyo6yCrp2zU7w9h4hWNbRaN4XOO9ckb1lI10WzdEniMZMsWQ9pvzQZoJA8a+CDMgICAgICChNggwSuJs1veKDLGwMaB7yguJA1QcZtJtA6oc6koXlsIyfINX9B0VfqNRM/ZrwptZrJt9jHPZzd1DVpdGdy6G5dDcuhuXQ3Lobl0Ny6G5dDcujCZhWJ1GG1AlhN2nvsJyePqumLJOOezvgz2w23jh6Dh1fDX0jJ4DkRmOLTyKtaXi9d4X+LLXLSLQlLd1QpGmnlDm9x3wKCXE7eYCgvQEBAQEFkjgGm6DHTtLryO1OiDMTZBy+1uMmK9BTOs9w+9c090clC1Wbb7FVZr9VNf4dfxcdpxuoCnLoMsFNPUkiniklI13G3stq1m3ENqUtf4Y3XzUNXTs356aVjeZbkszjtXmG1sV6xvaOyPdaOZdAugXQLoF0C6BdAuhu2GCYrJhdVv3vC/8Vo5c/ELthyzjt8knTaicN9/SeXo0crZY2yRkOY4AgjiraJ3jeHoYmJjeFZYxIwtPl0RlFpnlj3Rv1CCYEFUBAQEEaXtvDBqTn4IJDRYWGgQQ8Yrm4dQSVL/ZHZHM8AtMl+iu7jnyxixzeXmUsr5pXyykue87znHiTmqeZ37y81aZmZmeZWrDCZhNBJida2mjyFrvd+VvErpipOS2zvp8M5skUh6RRUcNFTshp2brGjzPiratYrG0PRY6VpWIqySwxzRvjlbvMeLEHkszG8bS2mItG0vL8SpXUNfNTP8A5biB1HA+6yp8lei0w8zmxzjyTRHutHIugXQLoF0C6BdAugXQddsViRcH4dM7tNG/FflxHz9/JT9Jk5pK38Oz7x5U/wCQ65TVqhVjdyRso0ORQSYnbzQgyICAgtebAoMMA3nufyyCDO42CDiduK4yVUVG09mIb7rczoq/V33mKqbxLLveMcejmLqGrC6Dt9h6UMw2SqLe1M8i/Gzcv3urLR1iK9S68Nx7Ypv7unGilLIQcdtzRfg17R/pyZe4/v71B1mPi6p8SxcXj6OSUFUl0C6BdAugXQLoF0BBmoat1FWRVTb3icCR0W1LTW0TDpiyTjvFoeqQytmiZIw3a8AjwKuYnfvD09Zi0bwpUR+kge3jbLxWWWCjfdgQTAgICDHMbNQUpm2iHXNBkdkM9EYl5RiVT63iFRUXuJJCR4aD4WVNkt1XmXmM1+vJa3vKNdaOQdCg9H2Qc1+AUxHDeB8blWum28uNnodBtOCrdLumCDWY+yF+D1QqTaPcJvyPBcs0RNJ3R9TFZwzFuNnmAPNVDzSt0C6BdAugXQLoF0C6BfJB6JsfVesYLEHHtQkxny0+Flaaa/Vj+j0GgydeGPl2b0qQmtfD93USMHB3wQTwgqgII9UewbIMzBZrbckEXGZzTYTWTjWOB7h42NlpknakuOot04b29on+zygZADlkqZ5gugXQdrsHW79NPROPajPpGD+06/H91YaO+9Zr7LnwzLHTOP27uuGimLQQee7VY969MaSlf/Cxu7R/qO+irdTn656a8KHW6vzbeXX4Y/r+znrqKgF0C6BdAugXQLoF0C6BdB2P2ezXFbBwaWPHncf+qnaOfihb+F27Wr+P6fo7JTls18vZrndQCgnMOQQXICCNVaBBIGgQavao7uz1af8ATt7yFyz/AHcout/29nl98yVUejze5dAugmYPiD8MxGKqb3QbPA9pp1Hz8gt8WSaX3h30+WcWSLx/kPVYJY5oWSxODmPALTzCuImJjeHpq2i0bwyLLLzHafCHYVXuEbf4WYl0R/Lzb5ftZVOfF5du3EvOazT+TftxPH/n4NRdcUQugXQLoF0C6BdAugXQLoy6r7Pnf9Qqxziafj/9UzRfFKy8L+8t9Id2rBdoFV/nB+lBNZ3QguQEEar7qCQNAg1m1Dd/Z7EByhc73Z/Jcs33co2sjfT3+jywnNU7zUF1kLoF0HV7FY4IZf8ADap9o3n7lzjofy+fBTNLm2nostNBqumfKvxPDuwRZWC6QsVw6LEqSSmnGRza4DNp5haZMcXrtLlmw1zU6bPMMSoKjDat1PVN3XDNruDxzCqcmOcc7S83mw2w36bIt8rrRyLoF0FC4A2JCHyVugXQLoF0C6Drfs7besrnfljYPeXfRTdFzZaeFR9u/wBI/vLuTop66QKnOtHRqCczuhBcgIMFSLsQXwu3o2nogtrYW1FHNA/uyxuYfMWWto3rMNb0i9ZrPq8cs5uTxZ4ycORGqpXko3jkusMl0C6CnvFjw1WTfbh6HsntAMSiFLVvHrcbdf6g5+PMKy02eLx0zyvtDq4yx0W5dNdSlggYrhdPilP6GrZe2bXcWHmFpkx1yRtLjnwUzV6bQ87xvAazCHl0jTLTE2bMwZD9XL9lWZcFsf0UGp0t8M9+GqGei4IyVhdBNidZHTU+rjm7g0cSumPHN7dLrhw2y3itXpEOz+HMom0jqSN7Gi284donnfmrPyKdPTs9BGlxRTy+ns57FdiSCZMLkzH8mU/sfqo+TR7d6SgZvDPXFP4OTqqWoo5TDVwPhkHsuGvUcwoVq2rO1oVl8dsc7WjZiWrQQEN3d/Z5Bu4fUzkZyzWB6NH1JVjo67UmV14XX7Fre8/2/d1ymLRryd+tk/tsEE9ugQVQEGOZt25ILKQ3jIOrSgzHRB5VtRSGix2pjDbNld6Vnnr8bqp1FenJMPNazH5ee0NVdcEUugXQLoKxSvilbJE4sew7zXNOYKzEzHeGYtMTvD0TZnaePEminq3NZWN5ZCTqPorPBqIvG08r7R62MsdN+XSbwKkrBRzd4EEAg8CksbOfxXZCgrbvgBpZecY7J8lGyaWlu8dkHN4fiyd69pTsCwSDB6csiJfI83kkOrungumHFGKNod9PpqYK7V5bQDmuqQEII1ZRwVkLoaqFkrDwcL+7kVi1YtHdpfHXJG147PJa+NkNfVQx9yOZ7G+AcQqW8RFpiHlskRW9qx6TLBdatFL30CD1nZ6k9RwilgIs4Mu/9RzP7q5w16ccQ9Ppcfl4a1bJxDQSdAuiQ19GC9xedXElBsAgqgIKOFwgjMPo6mx0cPigknNBye3+GGehjro23fTmzgBq0/RQ9Xj3r1R6KzxPD1U649Hn3/NVXKMujBdAugXQASCCCQRmCDYgp8yPd2Gz+2b4d2DF7yMGTagDtD9Q+YU3Fq9u11rpvEZrtTL3+bt6Wqgq4hLTSNkjOjmm6n1tFo3hcUvW8b1ndmust1UBBQmyCJiVdFh9FNVTGzI2E9SeAHVa3tFYmZc8uSuKk3txDx5z3vc58pvI4lzj1OZVLM7zu8nvM95UusDc7J4ccTxmJjm3hhtJIfDQe9d9Pj67x8kvRYfNyxHpHd6pZWz0qNXyBtOW8X9ny4oFIyzBfWyCUgICAdEEWqZlvDUZhBmhkEjGuHEIE8bJYnRyNDmPBa5p4g8FiY3jaWJiJjaXkePYa7CMUlpC7eYAHxu5sOl+uRVPlx+XeavLajD5GSafl9GvuubiXQLoF0C6BfwQZ6Ouq6GT0lHUPhfxLDr4jitq3tWd4lvjy3xzvSdnT4bt5UxWbiNK2cfniO673HI/BS6ayY+KFji8UvH3kb/OHS0W12DVQ/zQhd+WYbp+h8lJrqMdvVYY9fgv67fVs24hRubvCph3ee+F08yvukebTbfdrMT2rwmgbf1gTycI4e0ffoPNc76jHX1R8uuw4453n2hwOO4/VY1KDNaOBpuyFpyHU8yq7Lmtl+ik1OqvqJ78R6NUuSMqAXEBoLnE2DQMyVn6ERvw9S2Uwf8AwjDWtkA9ZlO/MRwPBvkPmrXBi8unzek0en8nHtPM8t6dF3TGtkd6xVEjNjMh1QT422AQXoCAgIMVR3UFtG3diPU3QZnIPIdpqz13Hq2UG7WyGNnKzcsvME+ap89urJMvLau/XntPz2/L992suuSOXQLoF0C6BdAugICCm62990X8EY6YVy5IyXQUug7jYjZ1zS3FK6OxIvBG4f8Akfl71P02D+ey48O0n/Nf8HdWCnLlGrZ/Rx7jT94/IdOqC2kiDWhBLCCqAgICCPUk2s3U5IMzButA5BBFxirFDhlTVHWKMlvU8PjZaXt01mXLNk8vHNvZ4s0m2eZ4k8SqV5KFboybyBdAugXQLoF0C6BdAugXQL9CfDW/BDu7fZbZBxLK3F47WsWUzh8XfRT8Gmn4rrjRaCd+vL+Tu2tG6LaKcuVs0rYYy9x8OqCDAx0spkl7x4cggnsbYdEF6AgICAdEEY9udo4DNBI0Qcl9o9aIMGZT7+6aiQDyGf0UTWW2x9PurPFMvRh6feXEUmB4pWm9NQTEHi9u4B71BriyWntCox6XPf4aS3tFsDXyWNZUwwji1o3z8lIro7TzKZj8KyT8dohvKXYbCYmkTGadxFrudYDqAF3rpKRz3TaeGYax9ru5/Gtiqyk3pcN/ioR7Gjx9VGy6W1e9O6DqPDb074+8f1cs9ro3uZI1zHt7zHDdLfEFRpjblW7bTtMd1FhgQEBAQUJA1IHUoNrg+z2JYsQYISyE/wA6QWb5c/JdqYL3SsOjzZp7R295egYBstQ4SWzEesVQ0leO6f7Rw8VYYtPXH39V3ptFjwd+ZdAALaLumrZpmQs3nm3LqggWfVSB8lw0d1vJBPiZujRBkQEBAQEFrjYFBgpheR7uWSCSgsdDE+QSOjYXtFg4tFx5rExEsbRyusBwCyyqgICCBiOFUGJM3a2kil4Bxb2h4HUeS0tjpbmHHLgxZY/iV3c5W7A0El3UdTPAT7LrPaPDj8VGto6ek7IOTwrFPwTMf1/dqp9gK9v4NXTvHDeBaVynR39JRp8KyRxaJRXbDYzfL1c9fSLX/SZHOfC8/wAmWLYLFXGz56ZniSfksxo8nu2r4XmnmYbCl+z5twauvd1ETPmfouldF7y7U8Jj+a35N/huy2D0DmvipGySt/mTnfPlfIeQUimnx19E3FocGPvFfz7t20ACwC7JithyCCPUVbIjuDtScAOHigjMifPIJJzvO4Dg1BOjj3BogyICAgICAgxTmzUCnbuxN65oMqC172sF3OA8SgjvroRk0uef7QgxGsmflHCG9XG6DHvVYcHb+motkgkMrGnKVpYeeoQSWua4Agg+CC5AQEBAQUOSDBLVwx+1vHk3NBFdNPUGzR6Np4DMoMsFK1uZQSmtsgvQEBAQEBAQYphcBBhkqJBlHFfkSUGE+tSnOQtHJqA2iubuzPU3QZ20zRwQZmxNHBBduN5IMb4Wu4IIzqTdN47g9MkC9Szuvv8AqF0FRU1A70bD4ZIHrc39Ef8Acgoauc92Ft+pKCnpqtxy3W+DUFDTSy/iSOd0ugyxUjWgZaIJDY2t4IMiAgICAgICAgIKEXQW+jF0FdwcAgrZBVAQEBBQhBQtHJBQxt5IHo28kD0beSCu4BwQVsgqgICAgICAgICAg//Z"
+                        alt="instagram">
+                </a>
+            </div>
+            <div>
+                <a class="social-button" href="https://www.instagram.com/diegobuitrago88/">
+                    <img class="social-icon"
+                        src="https://th.bing.com/th/id/OIP.lECad1wC12WN1ue6iEKbYwAAAA?rs=1&pid=ImgDetMain"
+                        alt="instagram">
+                </a>
+            </div>
+            <div class="">
+                <a class="social-button"
+                    href="https://co.linkedin.com/in/diego-buitrago-a03063284?trk=people-guest_people_search-card">
+                    <img class="social-icon"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Linkedin.svg/2048px-Linkedin.svg.png"
+                        alt="linkedin">
+                </a>
+            </div>
+            <div class="">
+                <a class="social-button" href="https://www.youtube.com/channel/UCMwN493y6HpnFrrLKUj_vlQ">
+                    <img class="social-icon"
+                        src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-youtube-social-media-round-icon-png-image_6315993.png"
+                        alt=" YouTube">
+                </a>
+            </div>
+            <div class="">
+                <a class="social-button" href="https://github.com/DiegoBuitrago88">
+                    <img class="social-icon"
+                        src="https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_1280.png" alt="Github">
+                </a>
+            </div>
+            <div class="">
+                <a class="social-button" href="https://app.netlify.com/teams/diegobuitrago88/overview">
+                    <img class="social-icon" src="https://cdn.worldvectorlogo.com/logos/netlify.svg" alt="Netlify">
+                </a>
+            </div>
+        </div>
+
+        </div>
+    </section>
+
+    <!-- Nueva sección de Hobbies con identificador "hobbies" -->
+    <section id="hobbies">
+        <h2>Mis Hobbies</h2>
+        <p>No colecciono objetos, colecciono momentos. Mi pasión es explorar, descubrir y perderme en la maravilla de lo
+            desconocido. Cada viaje es una oportunidad de sumergirme en la riqueza del mundo y recolectar instantes que
+            se
+            convierten en tesoros eternos en mi corazón errante.</p>
+        <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            height="200" width="270" alt="GUATAPE">
+        <!-- Contenido de Hobbies -->
+    </section>
+
+    <!-- Nueva sección de Deportes Extremos con identificador "deportesExtremos" -->
+    <section id="deportesExtremos">
+        <h2>Deportes Extremos</h2>
+        <p>Para algunos, los deportes extremos pueden parecer imprudentes, pero para mí, son un arte de riesgo
+            calculado. Cada
+            salto, cada curva pronunciada, me desafía a superar mis miedos y a confiar en mis habilidades. En este mundo
+            de
+            extremos, encuentro la libertad que alimenta mi espíritu intrépido.</p>
+        <img src="https://blog.jeep.com.ec/hubfs/7%20deportes%20extremos%20para%20realizar%20outdoor%20despu%C3%A9s%20de%20la%20cuarentena-1.png"
+            height="200 px" width="270 px ">
+    </section>
+
+    <!-- Nueva sección de Videos con identificador "videos" -->
+    <section id="videos">
+        <h2>Videos</h2>
+        <!-- Incrustar el video de YouTube -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/A_zbERZQn5A" frameborder="0"
+            allowfullscreen></iframe>
+        <!-- Contenido de Videos -->
+    </section>
+    <section id="projects">
+        <h2>Proyectos</h2>
+        <div id="projects-list">
+
+        </div>
+    </section>
+
+    <!DOCTYPE html>
+    <html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                background-color: #f4f4f4;
+            }
+
+            #contact {
+                background-color: #fff;
+                padding: 80px 0;
+            }
+
+            .container {
+                width: 80%;
+                margin: auto;
+                overflow: hidden;
+            }
+
+            h2 {
+                text-align: center;
+                color: #333;
+            }
+
+            p {
+                text-align: center;
+                font-size: 18px;
+                color: #666;
+            }
+
+            .contact-form {
+                max-width: 600px;
+                margin: auto;
+            }
+
+            form {
+                padding: 20px;
+                background: #fff;
+                border-radius: 6px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            label {
+                display: block;
+                margin: 10px 0 5px;
+                color: #333;
+            }
+
+            input,
+            textarea {
+                width: 100%;
+                padding: 8px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
+            button {
+                background: #fa0303;
+                color: #fff;
+                padding: 10px 15px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+
+            button:hover {
+                background: #f90202;
+            }
+
+            .contenedor-padre {
+                display: flex;
+                justify-content: flex-start;
+                /* Esto alineará los elementos al principio (izquierda) */
+            }
+
+
+            .datos-personales {
+
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Contacto</h2>
+                <p>¡Contáctame para colaboraciones!</p>
+                <div class="contact-form">
+                    <form>
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+
+                        <button>Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </body>
+
+    </html>
+
+    <footer>
+        &copy; 2024 Diego Buitrago | Diseñado por Diego Buitrago 88
+    </footer>
+
+    <script>
+        function irAHobbies() {
+            document.getElementById('hobbies').scrollIntoView({ behavior: 'smooth' });
+        }
+        function irADeportesExtremos() {
+            document.getElementById('deportesExtremos').scrollIntoView({ behavior: 'smooth' });
+        }
+        function irAMisproyectos() {
+            document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+        }
+
+    </script>
+    <script>
+        function irAVideos() {
+            document.getElementById('videos').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+    <script>
+        document.getElementById('descargarPdf').addEventListener('click', function () {
+            var rutaPdf = './Curriculum CV Profesional de Hombre con Foto Moderno Gris y Negro (1).pdf';
+
+
+            var enlaceTemporal = document.createElement('a');
+            enlaceTemporal.href = rutaPdf;
+            enlaceTemporal.target = '_blank';
+
+            var clicEvent = new MouseEvent('click', {
+                bubbles: true,
+                cancelable: true,
+                view: window
+            });
+
+            enlaceTemporal.dispatchEvent(clicEvent);
+        });
+    </script>
